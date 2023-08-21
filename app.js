@@ -8,7 +8,7 @@ const cors = require('cors')
 const xss = require('xss-clean')
 const rateLimiter = require('express-rate-limit')
 
-app.get('/', (req, res){
+app.get('/', (req, res) => {
   res.send('Jobs API')
 })
 
