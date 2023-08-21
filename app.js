@@ -8,10 +8,6 @@ const cors = require('cors')
 const xss = require('xss-clean')
 const rateLimiter = require('express-rate-limit')
 
-app.get('/', (req, res) => {
-  res.send('Jobs API')
-})
-
 const authenticateUser = require('./middleware/authentication')
 
 // routers
@@ -27,8 +23,12 @@ require('express-async-errors');
 const express = require('express');
 const app = express();
 
+app.get('/', (req, res) => {
+  res.send('Jobs API')
+})
+
 // public static folder
-app.use(express.static('./public'));
+// app.use(express.static('./public'));
 
 
 // error handler
